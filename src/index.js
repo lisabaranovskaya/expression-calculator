@@ -67,7 +67,7 @@ function expressionCalculator(expr) {
             values.push(val);
         }
 
-        else if (expr[i] == '(') {
+        else if (expr[i] == ')') {
             while (ops.length !== 0 && ops[ops.length - 1] != '(') {
                 let val2 = values[values.length - 1];
                 values.pop();
