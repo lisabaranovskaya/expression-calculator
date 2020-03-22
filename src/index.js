@@ -45,9 +45,9 @@ function precedence(op) {
 function expressionCalculator(expr) {
     // write your solution here
     
-    // if ((expr.match(/\(/g) || []).length !== (expr.match(/\)/g) || []).length) {
-    //     throw new ExpressionError("Brackets must be paired");
-    // }
+    if ((expr.match(/\(/g) || []).length !== (expr.match(/\)/g) || []).length) {
+        throw new ExpressionError("ExpressionError: Brackets must be paired");
+    }
 
     let values = [];
     let ops = [];
@@ -120,8 +120,6 @@ function expressionCalculator(expr) {
 
     return values[values.length - 1];
 }
-
-console.log(expressionCalculator('2*(3'));
 
 module.exports = {
     expressionCalculator
